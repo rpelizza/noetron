@@ -3,12 +3,7 @@ name: noetron-core
 description: Use when starting any conversation — establishes how to discover, evaluate, and use skills, requiring the correct applicable skill or combination of skills to be invoked before ANY response, including clarifying questions.
 ---
 
-If you are:
-
-- A subagent assigned to execute a specific task
-- An agent within a team assigned to execute a specific task
-
-**IGNORE THIS SKILL**
+If you are a subagent assigned to execute a specific task or an agent within a team assigned to execute a specific task **IGNORE THIS SKILL**.
 
 If there is any plausible possibility—even the slightest—that one or more skills may be relevant, applicable, or beneficial to the task you are performing, you **MUST immediately invoke and read the appropriate skill or skills before proceeding**.
 

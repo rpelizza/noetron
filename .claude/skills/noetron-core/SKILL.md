@@ -3,8 +3,11 @@ name: noetron-core
 description: Use when starting any conversation — establishes how to discover, evaluate, and use skills, requiring the correct applicable skill or combination of skills to be invoked before ANY response, including clarifying questions.
 ---
 
+<EXECUTOR-STOP>
 If you are a subagent assigned to execute a specific task or an agent within a team assigned to execute a specific task **IGNORE THIS SKILL**.
+</EXECUTOR-STOP>
 
+<EXTREMELY-IMPORTANT>
 If there is any plausible possibility—even the slightest—that one or more skills may be relevant, applicable, or beneficial to the task you are performing, you **MUST immediately invoke and read the appropriate skill or skills before proceeding**.
 
 When a skill applies, its use is mandatory. You have **no discretion** to ignore it, postpone it, replace it with your own judgment, or apply only the parts you prefer.
@@ -39,3 +42,4 @@ After invoking a skill, you MUST follow its instructions precisely and completel
 This rule is absolute and non-negotiable. You may not invent exceptions, minimize applicability, or rationalize your way around it. Do not proceed until every applicable skill has been invoked and its instructions have been incorporated into your execution.
 
 The only exception is when a higher-priority instruction or the skill’s explicit scope states that it must not be used.
+</EXTREMELY-IMPORTANT>

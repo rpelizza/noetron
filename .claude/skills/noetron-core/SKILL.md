@@ -3,9 +3,11 @@ name: noetron-core
 description: Use when starting any conversation — establishes how to discover, evaluate, and use skills, requiring the correct applicable skill or combination of skills to be invoked before ANY response, including clarifying questions.
 ---
 
-<EXECUTOR-STOP>
+<DELEGATED-AGENT-STOP>
 If you are a subagent assigned to execute a specific task or an agent within a team assigned to execute a specific task **IGNORE THIS SKILL**.
-</EXECUTOR-STOP>
+
+This exception applies ONLY to agents that received a task delegated by another agent (subagents or members of an agent team). If you are executing work inline — without a task having been delegated to you by another agent — this exception is discarded and you MUST follow this skill in full.
+</DELEGATED-AGENT-STOP>
 
 <EXTREMELY-IMPORTANT>
 If there is any plausible possibility—even the slightest—that one or more skills may be relevant, applicable, or beneficial to the task you are performing, you **MUST immediately invoke and read the appropriate skill or skills before proceeding**.

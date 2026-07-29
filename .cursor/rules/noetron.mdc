@@ -7,6 +7,8 @@ alwaysApply: true
 
 This project uses the **Noetron** harness, an intelligent, skill-driven engineering harness for reliable AI-assisted software development.
 
+For any given task, always start by reading the `.claude/skills/noetron-core/SKILL.md`. Purely conceptual questions that lack project context can be answered directly.
+
 ## Files
 
 `.claude/skills/` and `CLAUDE.md` are the sources of truth.

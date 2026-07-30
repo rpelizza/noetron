@@ -86,6 +86,7 @@ The plan records **what and why**; the spec records **how, step by step, with or
 - `noetron-verify` — any claim about current system behavior made while planning needs evidence.
 - `noetron-spec` — derives the executable spec from the approved plan.
 - `noetron-execute` — runs the ready spec inside the ratified boundary.
+- `noetron-design` — UI-bearing plans produce their direction contract with it during DESIGN.
 
 ---
 

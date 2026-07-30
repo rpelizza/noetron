@@ -83,6 +83,7 @@ All tasks done → run the spec's **Validation** section in full (the spec-level
 - `noetron-review` — per-task and final review protocol; the fix loop consumes its findings.
 - `noetron-debug` — a failing oracle whose cause is not evident routes there before more attempts.
 - `noetron-finish` — integration and closeout after the final review.
+- `noetron-design` — frontend tasks load it alongside this skill.
 
 ---
 

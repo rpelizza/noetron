@@ -80,6 +80,7 @@ From humans, external reviewers, or bots — before implementing anything:
 - `noetron-explore` — read-only verification of out-of-diff risks and of external feedback.
 - `noetron-debug` — a finding that reveals a deeper defect is investigated there.
 - `noetron-finish` — the passed final review is its entry gate.
+- `noetron-design` — reviews of frontend diffs delegate fidelity and craft-floor checks there.
 
 ---
 

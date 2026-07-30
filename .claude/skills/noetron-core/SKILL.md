@@ -67,7 +67,7 @@ Two invariants every implementation task inherits:
 
 ## Routing
 
-See [Routing](references/routing.md) for the current routes and the planned per-task dynamic graph.
+See [Routing](references/routing.md) for the direct routes and the per-task graph builder: classify → assemble the chain of nodes `{action, oracle, stop}` → ratify the route → execute updating `noetron/state.md` → adapt from the failed node when an oracle fails.
 
 ---
 

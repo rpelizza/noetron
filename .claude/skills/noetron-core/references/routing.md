@@ -8,6 +8,8 @@ Noetron builds its router skill-first: flow skills are created before the graph 
 |---|---|
 | `noetron/` missing or incomplete at the repository root | `noetron-setup` |
 | Creating, editing, splitting, or retiring a domain skill; approved skills pending in `noetron/setup/domain-skills.md` | `noetron-create-skill` |
+| A factual question about the repository/workspace; the user asks to explore, map, or survey the project | `noetron-explore` |
+| A material decision is open (requirement, contract, scope, UX, architecture, data, security, cost, acceptance); the user asks to be interviewed or to stress a design/plan | `noetron-interview` |
 | A task inside a domain covered by a `<repo-name>-*` skill | that domain skill, alongside whatever else applies |
 | Anything else | No specialized route yet: proceed under the doctrines in `SKILL.md` (oracle + execution), interacting per `noetron/setup/preferences.md` |
 

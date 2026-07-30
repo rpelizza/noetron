@@ -38,7 +38,7 @@ Name the gap in one sentence: *what would an agent do wrong (or not know) in thi
 
 ### 2. EVIDENCE
 
-Ground the skill in the repository: collect the real files and patterns it will reference, and at least one concrete instance of the gap — a wrong assumption an agent would plausibly make, an inconsistency that exists, a trap that has bitten before. No skill from pure imagination; if you cannot show the gap, do not write the skill.
+Ground the skill in the repository: collect the real files and patterns it will reference, and at least one concrete instance of the gap — a wrong assumption an agent would plausibly make, an inconsistency that exists, a trap that has bitten before. Run the sweep through `noetron-explore` (facts with evidence, never memory). No skill from pure imagination; if you cannot show the gap, do not write the skill.
 
 ### 3. DRAFT
 
@@ -51,7 +51,7 @@ Two gates, in order:
 1. **Checklist** (from [Doctrine](references/doctrine.md), "Review checklist") — fix everything it catches.
 2. **Trigger test** (see [Trigger Test](references/trigger-test.md)) — a fresh-context subagent gets a realistic task in the domain that does **not** name the skill; pass means the subagent invokes the skill and its rules visibly shape the output.
 
-Fail → diagnose with the table in [Trigger Test](references/trigger-test.md), adjust, re-test. Three failed rounds → escalate.
+Fail → diagnose with the table in [Trigger Test](references/trigger-test.md), adjust, re-test. Three failed rounds → escalate to the user via `noetron-interview`.
 
 ### 5. REGISTER
 

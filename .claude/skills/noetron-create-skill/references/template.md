@@ -34,6 +34,10 @@ description: Use when <situations, with the concrete tokens a real task would co
 ## Related skills
 
 - `<repo-name>-<sibling>` — <one line: when to go there instead>.
+
+---
+
+**This skill is working if:** <two to four observable signals — properties of diffs, absence of the failure mode>.
 ````
 
 ## Filled example (fictional)
@@ -75,4 +79,8 @@ Run `npm run test:billing` (money-rounding suite included) and check one refund 
 ## Related skills
 
 - `acme-billing-invoices` — invoice generation and numbering; go there for anything that renders or numbers documents.
+
+---
+
+**This skill is working if:** refund PRs write the ledger before the provider call without being told; webhook double-processing bugs stop appearing; refund reports reconcile to the cent.
 ````

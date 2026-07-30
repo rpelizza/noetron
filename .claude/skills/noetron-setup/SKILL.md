@@ -109,3 +109,7 @@ Record in `noetron/setup/`, following [setup.md](references/setup.md): the user'
 ## Step 7 — Report
 
 Close with a short summary: what was created, what already existed and was left untouched, what was declined, and what is pending (e.g. domain skills awaiting `noetron-create-skill`).
+
+---
+
+**This skill is working if:** a fresh repository reaches a complete `noetron/` workspace in a single pass; nothing pre-existing (CLAUDE.md content, skills, files) is ever overwritten; and later sessions never need setup again except to repair deliberate deletions.

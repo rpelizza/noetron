@@ -34,6 +34,8 @@ Name the gap in one sentence: *what would an agent do wrong (or not know) in thi
 | Technique | knows the facts but applies the wrong process |
 | Discipline | knows better but skips the rule under pressure |
 
+**Admission rule:** a skill is only admitted if this sentence names a concrete failure mode — something an agent would actually get wrong. "General knowledge about `<domain>`" names no failure and admits no skill. If you cannot fill the sentence, stop: there is no skill to create.
+
 ### 2. EVIDENCE
 
 Ground the skill in the repository: collect the real files and patterns it will reference, and at least one concrete instance of the gap — a wrong assumption an agent would plausibly make, an inconsistency that exists, a trap that has bitten before. No skill from pure imagination; if you cannot show the gap, do not write the skill.
@@ -68,3 +70,7 @@ Domain skills are nodes in the harness's routing graph. Keep the graph sound:
 - **Edges are exact names.** Every skill ends with a "Related skills" section listing sibling skills by their exact `name`. A misspelled name is a broken edge — verify each against `.claude/skills/`.
 - **Triggers are disjoint.** If two descriptions could fire on the same task, routing is nondeterministic: merge the skills or sharpen both descriptions until each task has one obvious owner.
 - **Narrow beats broad.** `acme-billing-refunds` routes better than `acme-backend`. A catch-all skill is a routing dead zone — split it.
+
+---
+
+**This skill is working if:** new domain skills pass the trigger test within the three-round budget; the catalog in `noetron/setup/domain-skills.md` always matches `.claude/skills/`; and the failure modes named in FRAME stop appearing in the repository's diffs and reviews.

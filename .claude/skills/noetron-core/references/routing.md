@@ -1,1 +1,23 @@
 # Routing
+
+Noetron builds its router skill-first: flow skills are created before the graph that routes to them, so this table never contains an edge to a node that does not exist.
+
+## Current routes
+
+| Situation | Route |
+|---|---|
+| `noetron/` missing or incomplete at the repository root | `noetron-setup` |
+| Creating, editing, splitting, or retiring a domain skill; approved skills pending in `noetron/setup/domain-skills.md` | `noetron-create-skill` |
+| A task inside a domain covered by a `<repo-name>-*` skill | that domain skill, alongside whatever else applies |
+| Anything else | No specialized route yet: proceed under the doctrines in `SKILL.md` (oracle + execution), interacting per `noetron/setup/preferences.md` |
+
+Every new harness skill adds its row here **in the same change that creates it** — a route and its node are born together, and a route without a node is a broken edge.
+
+## The dynamic graph (planned)
+
+When the flow skill set is complete, this file becomes the per-task graph builder:
+
+1. **Classify** the task — size, risk, domain, project type (from `noetron/state.md` and `noetron/setup/`).
+2. **Assemble** the chain of skills as a graph of nodes, each node `{action, oracle, stop condition}`, each edge gated by the previous node's oracle.
+3. **Execute** the graph, updating `noetron/state.md` at every phase change.
+4. **Adapt** — a failing oracle re-plans the remaining subgraph instead of pushing through.

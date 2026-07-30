@@ -49,6 +49,7 @@ Canonical sections, in order — omit any that would be empty:
 4. **Invariants & traps** — what must always hold; what has bitten before.
 5. **Verification** — how to prove work in this domain is correct (commands, checks).
 6. **Related skills** — exact sibling names.
+7. **Falsifiability footer** — close with `**This skill is working if:**` followed by two to four observable, second-order signals (properties of diffs, timing of questions, absence of the failure mode). Never first-order claims like "the agent reads the skill".
 
 ## Review checklist
 
@@ -64,3 +65,5 @@ Run before the trigger test; fix everything it catches.
 - [ ] Related skills listed with exact names, each verified against `.claude/skills/`.
 - [ ] No trigger overlap with any sibling description.
 - [ ] SKILL.md under ~200 lines; overflow moved to `references/`.
+- [ ] FRAME's failure mode is concrete — the skill names what goes wrong without it, not "general knowledge".
+- [ ] Ends with the falsifiability footer: observable, second-order signals only.

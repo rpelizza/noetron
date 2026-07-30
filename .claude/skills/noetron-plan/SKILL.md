@@ -49,6 +49,8 @@ Present the chosen approach as a design, scaled to complexity:
 
 Cover what the work needs, not a fixed template: interfaces and contracts, data, error and empty states, and the acceptance criteria the spec will later turn into oracles.
 
+**Visual questions get visual answers.** When a design question is genuinely visual — layout, hierarchy, look — offer a throwaway HTML mockup rendered in the browser instead of prose. Offer it per question, never by default: a question about a UI topic is not automatically a visual question. UI-bearing designs hand the aesthetic direction to `noetron-design`.
+
 ### 5. WRITE
 
 Write `noetron/plans/YYYY-MM-DD-<slug>.md`, `status: draft`, following the format in `noetron/plans/README.md` (format authority: the `noetron-setup` template). The `## Decisions` section records every decision ratified so far — including rejected alternatives and why. Open questions stay marked `(open)` and block approval.
@@ -87,6 +89,8 @@ The plan records **what and why**; the spec records **how, step by step, with or
 - `noetron-spec` — derives the executable spec from the approved plan.
 - `noetron-execute` — runs the ready spec inside the ratified boundary.
 - `noetron-design` — UI-bearing plans produce their direction contract with it during DESIGN.
+- `noetron-reasoning` — APPROACHES and risk analysis consume its techniques.
+- `noetron-branch` — the slug decided here names the branch it will create.
 
 ---
 

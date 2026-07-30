@@ -6,13 +6,14 @@ The file-handoff protocol between coordinator and delegated agents. Everything p
 
 Extract task N's text **verbatim** from the spec (code blocks, exact values, `verify:` lines included) to `noetron/work/<slug>/task-N-brief.md`. Exact values appear only in the brief — never retyped into the prompt.
 
-## The dispatch prompt — exactly five elements
+## The dispatch prompt — exactly six elements
 
 1. One line of project context: where this task fits.
 2. The brief's path, presented as: "read this first — it is your requirements, with the exact values to use verbatim."
-3. Interfaces and decisions from earlier tasks that the brief cannot know (the `Consumes` reality as built).
-4. Your resolution of any ambiguity you noticed in the brief.
-5. The report path (`work/<slug>/task-N-report.md`) and the report contract below.
+3. The paths of the domain skills (`<repo-name>-*`) covering the task's territory — with the instruction to read them before implementing. The implementer runs under `DELEGATED-AGENT-STOP` and will never discover them on its own.
+4. Interfaces and decisions from earlier tasks that the brief cannot know (the `Consumes` reality as built).
+5. Your resolution of any ambiguity you noticed in the brief.
+6. The report path (`work/<slug>/task-N-report.md`) and the report contract below.
 
 Prohibited in a dispatch: the whole spec or plan; accumulated session history; "state after Tasks 1–3" narrations; instructions that pre-judge review outcomes.
 

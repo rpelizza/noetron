@@ -11,7 +11,7 @@ For any given task, always start by reading the `.claude/skills/noetron-core/SKI
 
 ## Files
 
-`.claude/skills/` and `CLAUDE.md` are the sources of truth.
+`.claude/skills/` and the `noetron/` workspace are the sources of truth.
 
 This file (`.cursor/rules/noetron.mdc`) is a **manual adapter**, not a generated target.
 

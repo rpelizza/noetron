@@ -11,7 +11,7 @@ No ready spec → this skill does not run; route through `noetron-plan`'s chain 
 
 ## Execution modes
 
-Recommend and ratify the mode at kickoff (one compact confirm, together with branch and commit strategy), and record it in `noetron/state.md`:
+Recommend and ratify the mode at kickoff — one compact confirm, together with the branch and isolation prepared by `noetron-branch` and the commit strategy — and record it in `noetron/state.md`:
 
 | Mode | When |
 |---|---|
@@ -34,7 +34,7 @@ Two layers, split by durability:
 
 Run for each task, in spec order, without pausing between tasks.
 
-1. **DISPATCH** — hand off by file, never by pasted context. Extract the task's text verbatim to `work/<slug>/task-N-brief.md` and dispatch with exactly the five elements of the [Dispatch contract](references/dispatch.md). Never paste the whole spec or plan; never paste accumulated history.
+1. **DISPATCH** — hand off by file, never by pasted context. Extract the task's text verbatim to `work/<slug>/task-N-brief.md` and dispatch with exactly the six elements of the [Dispatch contract](references/dispatch.md) — including the domain skills covering the task's territory. Never paste the whole spec or plan; never paste accumulated history.
 2. **EXECUTE** — the implementer follows the task's embedded cycle (failing test → fails for the expected reason → minimal implementation → passes, suite green → commit), running each step's `verify:`. A material gap stops the task: delegated agents never interview the user — they return `NEEDS_CONTEXT` with the named gap, options, and recommendation (`noetron-interview` gap mode); the coordinator interviews and re-dispatches.
 3. **REPORT** — status is one of `DONE / DONE_WITH_CONCERNS / NEEDS_CONTEXT / BLOCKED`; full detail in the report file, at most 15 lines back (contract in [Dispatch](references/dispatch.md)).
 4. **VERIFY** — the coordinator applies `noetron-verify`: the report is claims, the diff is truth. Inspect the diff; every changed line traces to the task.
@@ -84,6 +84,8 @@ All tasks done → run the spec's **Validation** section in full (the spec-level
 - `noetron-debug` — a failing oracle whose cause is not evident routes there before more attempts.
 - `noetron-finish` — integration and closeout after the final review.
 - `noetron-design` — frontend tasks load it alongside this skill.
+- `noetron-branch` — clears the ground before the first write; part of the kickoff confirm.
+- `noetron-security` — overlays every task whose territory includes a sensitive surface.
 
 ---
 

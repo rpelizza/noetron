@@ -19,7 +19,7 @@ Identify the environment: worktree vs normal repo (`git rev-parse --git-dir` vs 
 Two last-filter checks (the real duty lives in earlier phases; this is the net, not the rule):
 
 - Behavior changed but the feature's doc in `noetron/docs/` was not touched?
-- A security-sensitive surface changed (auth, untrusted input, queries, sensitive data, uploads, dependencies) without a dedicated security pass in review?
+- A security-sensitive surface changed (auth, untrusted input, queries, sensitive data, uploads, dependencies) without `noetron-security` having run?
 
 Found a gap → **name it and offer** to return the work to the cycle. Never block: the decision is the user's, and it gets recorded.
 
@@ -82,6 +82,8 @@ Never offered, never in the menu. Only on the user's **explicit, unprompted requ
 - `noetron-execute` — hands off here; its ledger is the source of the history entry.
 - `noetron-interview` — safety-net gaps are decisions: named, offered, ratified.
 - `noetron-debug` — any red suite found here.
+- `noetron-branch` — created the isolation this skill detects and cleans by provenance.
+- `noetron-security` — the safety net's security check points there.
 
 ---
 

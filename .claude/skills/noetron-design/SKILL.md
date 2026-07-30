@@ -23,6 +23,8 @@ Five blocks, each a **concrete choice**, written before building:
 
 An existing brand or design system **is** the direction — no sortition; record it in the contract and follow it.
 
+**Visual questions get visual answers.** During direction and build, a genuinely visual question is answered with disposable mockups: quick HTML rendered in the browser or preview, showing 2–3 **structurally different** variants — slightly adjusted grids are wallpaper, not variants. Mockups are scratch (`noetron/work/` or temp), never committed as product code.
+
 ## Anti-convergence sortition
 
 When the direction is open (no brand imposed):

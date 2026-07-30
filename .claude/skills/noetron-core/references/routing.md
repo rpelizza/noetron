@@ -18,6 +18,10 @@ Noetron was built skill-first: every node below exists, so no route points at a 
 | A bug, test failure, incident, or unexpected behavior — before any fix | `noetron-debug` |
 | Execution complete and the work needs a destination; closeout | `noetron-finish` |
 | Frontend/UI work; design, redesign, or UI critique | `noetron-design` |
+| About to make the first write of a task; on a protected branch/detached HEAD; a worktree is needed | `noetron-branch` |
+| A change touches auth, untrusted input, queries, sensitive data, uploads, dependencies, or secrets | `noetron-security` |
+| Writing/changing/reviewing tests; a green suite that still feels unproven | `noetron-testing` |
+| Material uncertainty: competing hypotheses, decision between alternatives, evidence synthesis | `noetron-reasoning` |
 
 Every new harness skill adds its row and its edges **in the same change that creates it** — a route and its node are born together.
 
@@ -34,16 +38,16 @@ The four chains, as graphs (`══►` = edge gated by an attestation oracle; `
 ```text
 read-only:  explore ──► answer                    (no artifacts, no state)
 
-direct:     micro-plan (step → verify:) ──► execute inline ──► verify ──► finish
+direct:     branch ──► micro-plan (step → verify:) ──► execute inline ──► verify ──► finish
 
-spec-only:  explore ──► spec ══► execute ══► final review ══► finish
+spec-only:  explore ──► spec ══► branch ──► execute ══► final review ══► finish
                           ▲ stress (interview)
 
-full:       explore ──► interview (discovery) ──► plan ══► spec ══► execute ══► final review ══► finish
-                                                   ▲ stress          │
-                                                                     ├── gap ────► interview (STOP)
-bug:        debug (triage) ──► direct class: fix + regression        ├── bug ────► debug
-                └── architectural (3-fix rule) ──► plan              └── per task: verify + review + fix loop (cap 5)
+full:       explore ──► interview (discovery) ──► plan ══► spec ══► branch ──► execute ══► final review ══► finish
+                                                   ▲ stress                      │
+                                                                                 ├── gap ────► interview (STOP)
+bug:        debug (triage) ──► direct class: branch ► fix + regression           ├── bug ────► debug
+                └── architectural (3-fix rule) ──► plan                          └── per task: verify + review + fix loop (cap 5)
 ```
 
 The gates on the `══►` edges:
@@ -57,7 +61,7 @@ The gates on the `══►` edges:
 | final review → finish | review passed (one fixer + one re-review at most) |
 | finish menu → integration | the user's ratified choice; merged result proven green |
 
-Two standing guards are not sequential nodes — they fire anywhere: **`noetron-verify`** at every claim of success, **`noetron-interview`** at every material gap. And the parallelism rule holds at graph level: **write nodes serialize; read-only nodes fan out.**
+Two standing guards are not sequential nodes — they fire anywhere: **`noetron-verify`** at every claim of success, **`noetron-interview`** at every material gap. **Overlays** apply to every node in their territory: domain skills (`<repo-name>-*`), `noetron-design` (UI), `noetron-security` (sensitive surfaces), `noetron-testing` (all test code), `noetron-reasoning` (material uncertainty). `noetron-branch` guards the first write of every chain that commits. And the parallelism rule holds at graph level: **write nodes serialize; read-only nodes fan out.**
 
 ### 3. RATIFY
 

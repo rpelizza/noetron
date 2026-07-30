@@ -111,6 +111,7 @@ Present the synthesis for ratification. A summary without the gaps section is in
 ## Integration
 
 - `noetron-explore` — answers the factual half before any question is asked.
+- `noetron-reasoning` — builds the options, trade-offs, and recommendations questions carry.
 - `noetron-create-skill` — FRAME scoping doubts and trigger-test cap escalations land here.
 - `noetron-plan` — discovery before design; mandatory stress of the draft plan; every mid-planning decision.
 - `noetron-spec` — mandatory integral stress before `status: ready`; every translation-time decision.

@@ -63,6 +63,8 @@ Any fix that requires a product decision — behavior change, contract change, a
 - `noetron-execute` — a failing oracle whose cause is not evident routes here before more attempts.
 - `noetron-review` — a review finding that reveals a deeper defect is investigated here.
 - `noetron-plan` — an architecture questioned by the 3-fix rule re-enters planning.
+- `noetron-testing` — regression tests must pass its mutation check against the bug they pin.
+- `noetron-branch` — the direct-class fix still gets its branch before the first write.
 
 ---
 

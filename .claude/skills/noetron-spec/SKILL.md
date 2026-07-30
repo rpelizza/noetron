@@ -22,7 +22,8 @@ No valid source → back to `noetron-plan`. A spec is a translation, never a dec
 
 - **Bite-sized:** every step is a 2–5 minute action. A task is the smallest unit that carries its own test cycle and that a reviewer could reject while approving its neighbor. Fold setup, config, and scaffolding into the task whose deliverable needs them.
 - **Full code, no placeholders.** Every task contains the complete, real code — test code included. Never write: "TBD", "TODO", "implement later"; "add appropriate error handling / validation / edge cases"; "write tests for the above" without the test code; **"similar to Task N"** (repeat the code — tasks may be read out of order); steps that describe *what* without showing *how*; references to types or functions no task defines.
-- **The embedded cycle** in every task: write the failing test → run it, see it fail for the expected reason → minimal implementation → run it, see it pass with the suite green → commit.
+- **The embedded cycle** in every task: write the failing test → run it, see it fail for the expected reason → minimal implementation → run it, see it pass with the suite green → commit. Test quality follows `noetron-testing`: a test that cannot name the production change that would fail it does not count as the cycle's test.
+- **Docs travel with behavior.** A task that creates or changes a feature's behavior includes the update of `noetron/docs/<feature>.md` among its steps — documentation is part of the task, never an afterthought (`noetron-finish` only nets what escapes).
 - **Interfaces are the seams between tasks.** Each task declares `Consumes` (exact signatures from earlier tasks) and `Produces` (exact signatures it exports) — that block is how an isolated executor learns its neighbors' names and types.
 - **Global constraints travel verbatim.** Copy the source's project-wide requirements — version floors, dependency limits, naming and text rules, platform requirements — one line each, exact values. Every task implicitly includes this section, and reviewers use it as their attention lens.
 - **Stop condition declared in the header:** by default, three failed attempts at a step's verify → stop and escalate with what was tried. A task may override; no task may omit.
@@ -46,6 +47,7 @@ Four axes, all mandatory:
 2. **Placeholder scan** — hunt the prohibited list; any hit is rewritten with the real content.
 3. **Interface consistency** — the same function must have the same name and signature in every task that mentions it; `clearLayers()` in Task 3 and `clearFullLayers()` in Task 7 is a bug, not a detail.
 4. **Oracle presence** — every step has its `verify:`; every task has its own test cycle; the header has its stop condition.
+5. **Docs coverage** — every behavior-changing task carries its documentation step.
 
 ### 5. STRESS
 Mandatory and integral: run `noetron-interview` (focused stress) against the full spec — no exemption for specs derived from freshly stressed plans. New decisions discovered in translation are resolved with the user; findings that contradict the plan send the work back to `noetron-plan`.
@@ -73,6 +75,8 @@ Execution belongs to `noetron-execute`. Mark acceptance criteria as the executor
 - `noetron-explore` — re-verification of every fact the tasks touch.
 - `noetron-verify` — the spec's oracles are what it will run at claim time.
 - `noetron-execute` — runs the ready spec, task by task.
+- `noetron-testing` — the test code inside every task follows its doctrine.
+- `noetron-security` — sensitive work carries security acceptance criteria born here.
 
 ---
 

@@ -81,6 +81,7 @@ All tasks done → run the spec's **Validation** section in full (the spec-level
 - `noetron-explore` — read-only investigation nodes, freely in parallel.
 - `noetron-plan` — chain classification happens there before this skill ever runs.
 - `noetron-review` — per-task and final review protocol; the fix loop consumes its findings.
+- `noetron-debug` — a failing oracle whose cause is not evident routes there before more attempts.
 - Planned edge: `noetron-finish` (integration and closeout).
 
 ---

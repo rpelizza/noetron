@@ -74,7 +74,8 @@ When the oracle fails, the real status with the real output **is** the correct r
 - `noetron-explore` — gathers evidence when the oracle is a fact to establish.
 - `noetron-plan` — claims about current system behavior made during planning land here.
 - `noetron-spec` — the oracles this skill runs at claim time are born there.
-- Planned edges, activated as each skill is born: `noetron-execute` (every step ends here), `noetron-review` (findings need evidence too), `noetron-finish` (the last gate before integration).
+- `noetron-execute` — every step, report, and the final Validation end here.
+- Planned edges, activated as each skill is born: `noetron-review` (findings need evidence too), `noetron-finish` (the last gate before integration).
 
 ---
 

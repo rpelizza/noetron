@@ -13,6 +13,7 @@ Noetron builds its router skill-first: flow skills are created before the graph 
 | About to claim anything works, passes, is fixed or done — including partial steps and subagent reports | `noetron-verify` |
 | Work needs planning — greenfield, or a change with open decisions; or it is unclear whether a task needs a plan, a spec, or neither | `noetron-plan` |
 | An approved plan (or ratified spec-only work) needs its executable spec; the user asks for a spec or task breakdown | `noetron-spec` |
+| A ready spec needs executing; an interrupted execution needs resuming; the user asks to implement an approved plan/spec | `noetron-execute` |
 | A task inside a domain covered by a `<repo-name>-*` skill | that domain skill, alongside whatever else applies |
 | Anything else | No specialized route yet: proceed under the doctrines in `SKILL.md` (oracle + execution), interacting per `noetron/setup/preferences.md` |
 

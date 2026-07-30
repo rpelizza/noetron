@@ -114,7 +114,7 @@ Present the synthesis for ratification. A summary without the gaps section is in
 - `noetron-create-skill` — FRAME scoping doubts and trigger-test cap escalations land here.
 - `noetron-plan` — discovery before design; mandatory stress of the draft plan; every mid-planning decision.
 - `noetron-spec` — mandatory integral stress before `status: ready`; every translation-time decision.
-- Planned edge, activated when the skill is born: `noetron-execute` (gap mode is its mandatory stop).
+- `noetron-execute` — gap mode is its mandatory stop; delegated agents escalate here via `NEEDS_CONTEXT`.
 
 ---
 

@@ -54,7 +54,7 @@ Mandatory and integral: run `noetron-interview` (focused stress) against the ful
 Present the synthesis; the user ratifies → `status: ready`. Only ready specs execute. Ratification is an attestation oracle.
 
 ### 7. HANDOFF
-Execution belongs to `noetron-execute` (planned edge — until it exists, ask the user how to proceed). Mark acceptance criteria as the executor completes tasks; `noetron/state.md` points to the active spec throughout.
+Execution belongs to `noetron-execute`. Mark acceptance criteria as the executor completes tasks; `noetron/state.md` points to the active spec throughout.
 
 ## Red flags
 
@@ -72,7 +72,7 @@ Execution belongs to `noetron-execute` (planned edge — until it exists, ask th
 - `noetron-interview` — mandatory integral stress; every translation-time decision.
 - `noetron-explore` — re-verification of every fact the tasks touch.
 - `noetron-verify` — the spec's oracles are what it will run at claim time.
-- Planned edge: `noetron-execute` (runs the ready spec, task by task).
+- `noetron-execute` — runs the ready spec, task by task.
 
 ---
 

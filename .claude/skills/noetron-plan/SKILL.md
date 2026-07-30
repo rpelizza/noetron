@@ -85,7 +85,7 @@ The plan records **what and why**; the spec records **how, step by step, with or
 - `noetron-explore` — territory mapping and classifier evidence.
 - `noetron-verify` — any claim about current system behavior made while planning needs evidence.
 - `noetron-spec` — derives the executable spec from the approved plan.
-- Planned edge: `noetron-execute` (runs the ready spec).
+- `noetron-execute` — runs the ready spec inside the ratified boundary.
 
 ---
 

@@ -11,6 +11,7 @@ Noetron builds its router skill-first: flow skills are created before the graph 
 | A factual question about the repository/workspace; the user asks to explore, map, or survey the project | `noetron-explore` |
 | A material decision is open (requirement, contract, scope, UX, architecture, data, security, cost, acceptance); the user asks to be interviewed or to stress a design/plan | `noetron-interview` |
 | About to claim anything works, passes, is fixed or done — including partial steps and subagent reports | `noetron-verify` |
+| Work needs planning — greenfield, or a change with open decisions; or it is unclear whether a task needs a plan, a spec, or neither | `noetron-plan` |
 | A task inside a domain covered by a `<repo-name>-*` skill | that domain skill, alongside whatever else applies |
 | Anything else | No specialized route yet: proceed under the doctrines in `SKILL.md` (oracle + execution), interacting per `noetron/setup/preferences.md` |
 

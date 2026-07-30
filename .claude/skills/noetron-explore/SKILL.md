@@ -40,6 +40,7 @@ Stop when the blocking question is answered with evidence, or when additional re
 
 - `noetron-interview` — where unknowns that are decisions go.
 - `noetron-create-skill` — its EVIDENCE step runs through this skill.
+- `noetron-plan` — its EXPLORE step and chain classifier run here.
 
 ---
 

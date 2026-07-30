@@ -112,7 +112,8 @@ Present the synthesis for ratification. A summary without the gaps section is in
 
 - `noetron-explore` — answers the factual half before any question is asked.
 - `noetron-create-skill` — FRAME scoping doubts and trigger-test cap escalations land here.
-- Planned edges, activated as each skill is born: `noetron-plan` (interview before design, stress after), `noetron-spec` (stress before execution), `noetron-execute` (gap mode is its mandatory stop).
+- `noetron-plan` — discovery before design; mandatory stress of the draft plan; every mid-planning decision.
+- Planned edges, activated as each skill is born: `noetron-spec` (stress before execution), `noetron-execute` (gap mode is its mandatory stop).
 
 ---
 

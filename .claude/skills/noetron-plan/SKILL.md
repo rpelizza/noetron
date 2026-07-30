@@ -63,7 +63,7 @@ Present the synthesis: decisions, gaps and their fates, risks. The user approves
 
 ### 8. HANDOFF
 
-Deriving the executable spec belongs to `noetron-spec` (planned edge — until it exists, ask the user how to proceed). The plan's slug names everything downstream: the spec, the branch, the history entry.
+Deriving the executable spec belongs to `noetron-spec`. The plan's slug names everything downstream: the spec, the branch, the history entry.
 
 ## Plan altitude
 
@@ -84,7 +84,8 @@ The plan records **what and why**; the spec records **how, step by step, with or
 - `noetron-interview` — discovery before design; mandatory stress after; every mid-planning decision.
 - `noetron-explore` — territory mapping and classifier evidence.
 - `noetron-verify` — any claim about current system behavior made while planning needs evidence.
-- Planned edges, activated as each skill is born: `noetron-spec` (derives the executable spec), `noetron-execute` (runs it).
+- `noetron-spec` — derives the executable spec from the approved plan.
+- Planned edge: `noetron-execute` (runs the ready spec).
 
 ---
 

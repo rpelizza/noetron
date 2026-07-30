@@ -73,7 +73,8 @@ When the oracle fails, the real status with the real output **is** the correct r
 - `noetron-core` — the oracle doctrine this skill enforces at speech time.
 - `noetron-explore` — gathers evidence when the oracle is a fact to establish.
 - `noetron-plan` — claims about current system behavior made during planning land here.
-- Planned edges, activated as each skill is born: `noetron-spec` (oracles are born there), `noetron-execute` (every step ends here), `noetron-review` (findings need evidence too), `noetron-finish` (the last gate before integration).
+- `noetron-spec` — the oracles this skill runs at claim time are born there.
+- Planned edges, activated as each skill is born: `noetron-execute` (every step ends here), `noetron-review` (findings need evidence too), `noetron-finish` (the last gate before integration).
 
 ---
 

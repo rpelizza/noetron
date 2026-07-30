@@ -38,7 +38,7 @@ Name the gap in one sentence: *what would an agent do wrong (or not know) in thi
 
 ### 2. EVIDENCE
 
-Ground the skill in the repository: collect the real files and patterns it will reference, and at least one concrete instance of the gap — a wrong assumption an agent would plausibly make, an inconsistency that exists, a trap that has bitten before. Run the sweep through `noetron-explore` (facts with evidence, never memory). No skill from pure imagination; if you cannot show the gap, do not write the skill.
+Ground the skill in the repository: collect the real files and patterns it will reference, and at least one concrete instance of the gap — a wrong assumption an agent would plausibly make, an inconsistency that exists, a trap that has bitten before. Run the sweep through `noetron-explore` (facts with evidence, never memory). For skills covering a technology or stack, EVIDENCE also includes the **version actually in use** and doc confirmation per the doctrine's "Stack claims are version-anchored" — a stack skill written from memory is imagination with a frontmatter. No skill from pure imagination; if you cannot show the gap, do not write the skill.
 
 ### 3. DRAFT
 

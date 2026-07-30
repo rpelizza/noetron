@@ -37,6 +37,14 @@ Two rules regardless of form:
 - **Derive, don't enumerate.** Never hard-code counts or exhaustive lists that reality will outgrow ("the 7 services are…"); state where to look instead ("one service per directory under `services/`").
 - Link `noetron/docs/`, ADRs, and sibling skills by relative path or exact name — never paste their content.
 
+## Stack claims are version-anchored
+
+When the skill covers a technology — a framework, library, SDK, or tool — external-technology facts follow `noetron-explore`'s rule at authoring time:
+
+- Identify the **version actually in use** (manifest, lockfile) and cite it in the skill (e.g. `react 18.2.0 — package.json:6`).
+- Every claim about the technology's behavior is confirmed against **context7 or official docs for that version** and carries that source — or it does not enter the skill. Conventions observed in the repository cite `file:line`; technology facts cite doc + version; **nothing cites memory**.
+- context7 unreachable → official docs. Both unreachable → the claim is written as `(unconfirmed — verify against docs for <version>)` and the limitation is reported to the user. Silence about the limitation is the violation, not the limitation itself.
+
 ## Structure
 
 Directory: `.claude/skills/<repo-name>-<skill-name>/` containing `SKILL.md`; add `references/` only for material over ~50 lines or rarely loaded.
@@ -66,4 +74,5 @@ Run before the trigger test; fix everything it catches.
 - [ ] No trigger overlap with any sibling description.
 - [ ] SKILL.md under ~200 lines; overflow moved to `references/`.
 - [ ] FRAME's failure mode is concrete — the skill names what goes wrong without it, not "general knowledge".
+- [ ] If the skill covers a stack: the version in use is cited, and every technology claim carries a version-anchored source (context7/official docs) or an explicit `(unconfirmed)` mark — none from memory.
 - [ ] Ends with the falsifiability footer: observable, second-order signals only.

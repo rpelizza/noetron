@@ -60,10 +60,11 @@ A unit of work is only well-defined as **action + oracle + stop condition**:
 
 ## Execution doctrine
 
-Two invariants every implementation task inherits:
+Three invariants every implementation task inherits:
 
 - **Every changed line traces to the request.** Given the diff and the request, each hunk has a nameable justification. This is the default machine oracle for implementation work when no better one exists.
 - **Own your orphans.** Remove the imports, variables, and functions that *your* change made unused. Pre-existing dead code is not yours: report it, never delete it unasked.
+- **Bookkeeping never rides in content commits.** Harness records — `noetron/state.md`, spec checkboxes, catalogs — land only in the closeout metadata commit (`noetron-finish`), never mixed into commits that carry code or docs.
 
 ## Routing
 

@@ -83,6 +83,7 @@ From humans, external reviewers, or bots — before implementing anything:
 - `noetron-design` — reviews of frontend diffs delegate fidelity and craft-floor checks there.
 - `noetron-security` — composes as an additional lens on diffs touching sensitive surfaces.
 - `noetron-testing` — the quality lens judges test code by its doctrine.
+- `noetron-preferences` — the quality lens holds the global floor (hygiene, DRY, production-ready) on every diff.
 
 ---
 

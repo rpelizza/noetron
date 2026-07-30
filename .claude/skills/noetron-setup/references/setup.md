@@ -27,6 +27,8 @@ Project-level harness configuration, one file per subject:
 
 ## Stated preferences
 - <project-level preference the user stated during setup or later tasks>
+
+Project preferences recorded here override the harness floor (`noetron-preferences`).
 ```
 
 ### noetron/setup/mcp.md

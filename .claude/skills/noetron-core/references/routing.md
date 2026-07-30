@@ -22,6 +22,7 @@ Noetron was built skill-first: every node below exists, so no route points at a 
 | A change touches auth, untrusted input, queries, sensitive data, uploads, dependencies, or secrets | `noetron-security` |
 | Writing/changing/reviewing tests; a green suite that still feels unproven | `noetron-testing` |
 | Material uncertainty: competing hypotheses, decision between alternatives, evidence synthesis | `noetron-reasoning` |
+| Writing anything a project will keep — code, config, commits, logs, UI text; the user states a lasting preference | `noetron-preferences` |
 
 Every new harness skill adds its row and its edges **in the same change that creates it** — a route and its node are born together.
 
@@ -61,7 +62,7 @@ The gates on the `══►` edges:
 | final review → finish | review passed (one fixer + one re-review at most) |
 | finish menu → integration | the user's ratified choice; merged result proven green |
 
-Two standing guards are not sequential nodes — they fire anywhere: **`noetron-verify`** at every claim of success, **`noetron-interview`** at every material gap. **Overlays** apply to every node in their territory: domain skills (`<repo-name>-*`), `noetron-design` (UI), `noetron-security` (sensitive surfaces), `noetron-testing` (all test code), `noetron-reasoning` (material uncertainty). `noetron-branch` guards the first write of every chain that commits. And the parallelism rule holds at graph level: **write nodes serialize; read-only nodes fan out.**
+Two standing guards are not sequential nodes — they fire anywhere: **`noetron-verify`** at every claim of success, **`noetron-interview`** at every material gap. **Overlays** apply to every node in their territory: domain skills (`<repo-name>-*`), `noetron-design` (UI), `noetron-security` (sensitive surfaces), `noetron-testing` (all test code), `noetron-reasoning` (material uncertainty), `noetron-preferences` (the global floor under everything a project keeps). `noetron-branch` guards the first write of every chain that commits. And the parallelism rule holds at graph level: **write nodes serialize; read-only nodes fan out.**
 
 ### 3. RATIFY
 

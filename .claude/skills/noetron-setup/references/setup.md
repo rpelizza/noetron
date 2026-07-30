@@ -48,7 +48,9 @@ server was declined>
 ```markdown
 # Domain skills
 
-Naming: `<repo-name>-<skill-name>` in `.claude/skills/`.
+Prefix: `<prefix>` — derived from the project's manifest name at setup and confirmed by the
+user. All domain skills are named `<prefix>-<skill-name>` in `.claude/skills/`. This file is
+the authority for the prefix; it is never re-derived from the directory name.
 
 ## Catalog
 | Skill | Domain | Status |

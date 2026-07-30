@@ -28,6 +28,7 @@ Executors always run at the session's model and effort — never downgraded to s
 Two layers, split by durability:
 
 - **`noetron/state.md`** (versioned) — the crash-recovery point: `phase: execute`, pointer to the active spec, one `Task N: complete` line per finished task under Progress, decisions mirrored. Updated at every task completion and phase change. **After compaction, trust the ledger and `git log` over your own memory** — a task with a `complete` line is DONE; never re-dispatch it; resume at the first task without one.
+  **Bookkeeping is never task content:** `state.md` and spec checkbox updates stay in the working tree and are committed only at closeout, in `noetron-finish`'s metadata commit — task commits carry exclusively lines that trace to the task.
 - **`noetron/work/<slug>/`** (ephemeral) — created at execution start with a self-ignoring `.gitignore` (containing `*`); holds the file handoffs: task briefs, reports, review packages. It belongs to this slug alone — another slug's directory is never yours to read or write. Deleted at completion, after the history entry: git history is the record then. (`git clean -fdx` destroys it; recover from `state.md` + `git log`.)
 
 ## The task loop

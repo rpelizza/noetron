@@ -45,7 +45,8 @@ Wait for the answer — integration is the user's decision. Detached HEAD (exter
 1. Write the history entry (`noetron/history/YYYY-MM-DD-<slug>.md`, per the template) by summarizing `noetron/state.md`.
 2. Mark the spec `done` and the plan `executed`, if not already.
 3. Reset `noetron/state.md` to idle.
-4. Delete `noetron/work/<slug>/` — **only after the history entry exists**.
+4. **Commit the bookkeeping in one metadata-only commit** — the history entry, the spec/plan status flips, and the state reset (`chore(noetron): close <slug>`). Task commits never carry these files, and this commit carries nothing else.
+5. Delete `noetron/work/<slug>/` — **only after the history entry exists**.
 
 ### 9. CLEANUP — by provenance
 Remove only worktrees under a directory we created (`.worktrees/` or `worktrees/`): `git worktree remove` + `git worktree prune`. Anything else is host-owned — leave it in place; if the platform offers a workspace-exit tool, use that instead. Never clean a sibling worktree because it "looks stale".

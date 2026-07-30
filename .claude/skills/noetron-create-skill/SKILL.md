@@ -7,7 +7,7 @@ description: Use when creating, editing, splitting, or retiring a domain skill (
 
 Create or edit **domain skills** — the skills that teach the harness this project's own domains. Harness skills (`noetron-*`) are out of scope: they are authored only in the Noetron source repository, never in target projects.
 
-Domain skills live in `.claude/skills/` and are named `<repo-name>-<skill-name>` (repository root directory name, lowercased). Bodies are written in English; domain terms stay in the project's original language (e.g. `talhão`, `nota fiscal`).
+Domain skills live in `.claude/skills/` and are named `<prefix>-<skill-name>` — the prefix is **read from `noetron/setup/domain-skills.md`**, the recorded authority (set at setup from the project's manifest name, user-confirmed). Never re-derive it from the directory name: a scratch checkout named `p12` still creates `till-*` skills. Bodies are written in English; domain terms stay in the project's original language (e.g. `talhão`, `nota fiscal`).
 
 ## What a domain skill is — and is not
 

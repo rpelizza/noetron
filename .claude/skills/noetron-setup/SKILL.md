@@ -94,10 +94,10 @@ context7 works without an API key; a free key from context7.com/dashboard raises
 
 ## Step 5 — Map domain skills
 
-Domain skills teach the harness this project's own domains. They live in `.claude/skills/` and are always named `<repo-name>-<skill-name>` (e.g. `acme-billing`, `acme-auth`).
+Domain skills teach the harness this project's own domains. They live in `.claude/skills/` and are always named `<prefix>-<skill-name>` (e.g. `acme-billing`, `acme-auth`).
 
-1. Determine `<repo-name>`: the repository root directory name, lowercased.
-2. Inventory `.claude/skills/`: `noetron-*` are harness skills; `<repo-name>-*` are domain skills; report anything else to the user as unrecognized (do not touch it).
+1. Determine the domain-skill prefix: the project's **manifest name** (package.json, pyproject.toml, Cargo.toml, go.mod — whatever the stack uses), normalized to lowercase kebab-case; fall back to the repository root directory name only when no manifest names the project. **Confirm the prefix with the user** and record it in `noetron/setup/domain-skills.md` — from then on the catalog is the authority; it is never re-derived.
+2. Inventory `.claude/skills/`: `noetron-*` are harness skills; `<prefix>-*` are domain skills; report anything else to the user as unrecognized (do not touch it).
 3. If domain skills exist, list them and record the catalog in step 6.
 4. If none exist, sweep the codebase for domain candidates — modules, bounded contexts, integrations, UI areas, infrastructure concerns — and propose creating a domain skill for each strong candidate. Aim for the maximum useful coverage and let the user trim the list.
 5. Creation itself is delegated to the `noetron-create-skill` skill. If it is not installed yet, record the approved list as pending in step 6 so it can be picked up later.

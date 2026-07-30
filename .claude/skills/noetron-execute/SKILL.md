@@ -38,7 +38,7 @@ Run for each task, in spec order, without pausing between tasks.
 2. **EXECUTE** — the implementer follows the task's embedded cycle (failing test → fails for the expected reason → minimal implementation → passes, suite green → commit), running each step's `verify:`. A material gap stops the task: delegated agents never interview the user — they return `NEEDS_CONTEXT` with the named gap, options, and recommendation (`noetron-interview` gap mode); the coordinator interviews and re-dispatches.
 3. **REPORT** — status is one of `DONE / DONE_WITH_CONCERNS / NEEDS_CONTEXT / BLOCKED`; full detail in the report file, at most 15 lines back (contract in [Dispatch](references/dispatch.md)).
 4. **VERIFY** — the coordinator applies `noetron-verify`: the report is claims, the diff is truth. Inspect the diff; every changed line traces to the task.
-5. **REVIEW** — per-task review with fresh eyes, fed by brief + report + review package + the spec's Global constraints as attention lens (protocol matures into `noetron-review`, planned edge; until it exists, the coordinator dispatches a reviewer itself under the same contract). Never pre-judge the reviewer: if the prompt you are writing contains "don't flag", "don't treat X as a defect", or "at most Minor" — stop; you are pre-judging to spare yourself a fix loop.
+5. **REVIEW** — per-task review under `noetron-review`: the two lenses (blind spec + quality), severities, and the pre-report gate live there; the review package and paths come from the [Dispatch contract](references/dispatch.md). Never pre-judge the reviewer: if the prompt you are writing contains "don't flag", "don't treat X as a defect", or "at most Minor" — stop; you are pre-judging to spare yourself a fix loop.
 6. **FIX LOOP** — cap **5**:
    - Rounds 1–3: resume the **original implementer** with the findings verbatim — its context is intact.
    - Rounds 4–5: dispatch a **fresh implementer** framed as: "a previous implementer tried this task 3 times; it is yours now — read the report for what was tried." Fresh eyes, same model (it is already the maximum).
@@ -80,7 +80,8 @@ All tasks done → run the spec's **Validation** section in full (the spec-level
 - `noetron-verify` — every claim, every report-vs-diff check, the final Validation.
 - `noetron-explore` — read-only investigation nodes, freely in parallel.
 - `noetron-plan` — chain classification happens there before this skill ever runs.
-- Planned edges: `noetron-review` (per-task and final review protocol), `noetron-finish` (integration and closeout).
+- `noetron-review` — per-task and final review protocol; the fix loop consumes its findings.
+- Planned edge: `noetron-finish` (integration and closeout).
 
 ---
 

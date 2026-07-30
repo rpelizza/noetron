@@ -60,7 +60,7 @@ The only reasons to pause a running execution:
 
 ## Completion
 
-All tasks done → run the spec's **Validation** section in full (the spec-level oracle) → check acceptance criteria one by one → `status: done` on the spec. Present the synthesis with evidence (attestation oracle) and hand off: integration and closeout belong to `noetron-finish`, the final review pass to `noetron-review` (planned edges — until they exist, ask the user the destination). `work/<slug>/` is deleted only after the history entry exists.
+All tasks done → run the spec's **Validation** section in full (the spec-level oracle) → check acceptance criteria one by one → `status: done` on the spec. Present the synthesis with evidence (attestation oracle) and hand off: the final review pass to `noetron-review`, then integration and closeout to `noetron-finish`. `work/<slug>/` is deleted only after the history entry exists.
 
 ## Red flags
 
@@ -82,7 +82,7 @@ All tasks done → run the spec's **Validation** section in full (the spec-level
 - `noetron-plan` — chain classification happens there before this skill ever runs.
 - `noetron-review` — per-task and final review protocol; the fix loop consumes its findings.
 - `noetron-debug` — a failing oracle whose cause is not evident routes there before more attempts.
-- Planned edge: `noetron-finish` (integration and closeout).
+- `noetron-finish` — integration and closeout after the final review.
 
 ---
 

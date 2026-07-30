@@ -79,7 +79,7 @@ From humans, external reviewers, or bots — before implementing anything:
 - `noetron-interview` — feedback that contradicts a ratified decision goes to the user.
 - `noetron-explore` — read-only verification of out-of-diff risks and of external feedback.
 - `noetron-debug` — a finding that reveals a deeper defect is investigated there.
-- Planned edge: `noetron-finish` (the final review is its entry gate).
+- `noetron-finish` — the passed final review is its entry gate.
 
 ---
 

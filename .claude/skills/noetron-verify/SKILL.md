@@ -76,7 +76,7 @@ When the oracle fails, the real status with the real output **is** the correct r
 - `noetron-spec` — the oracles this skill runs at claim time are born there.
 - `noetron-execute` — every step, report, and the final Validation end here.
 - `noetron-review` — findings are claims and need evidence too.
-- Planned edge, activated when the skill is born: `noetron-finish` (the last gate before integration).
+- `noetron-finish` — the fresh proof at its entry and the merged-result proof before cleanup.
 
 ---
 

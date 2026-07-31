@@ -36,7 +36,7 @@ flowchart LR
 | **Direct** | small mechanical change, one surface, obvious oracle | branch → inline micro-plan (`step → verify:`) → execute → verify → finish |
 | **Read-only** | conceptual or investigative | explore → answer (no artifacts, no state) |
 
-Two standing guards fire anywhere in the graph: **verify** (no claim of success without fresh evidence) and **interview** (no gap filled by silent default — the LLM never decides alone). Overlays apply to every node in their territory: **design** (UI), **security** (sensitive surfaces), **testing** (all test code), **reasoning** (material uncertainty), and your project's own **domain skills**.
+Two standing guards fire anywhere in the graph: **verify** (no claim of success without fresh evidence) and **interview** (no gap filled by silent default — the LLM never decides alone). Overlays apply to every node in their territory: **design** (UI), **security** (sensitive surfaces), **testing** (all test code), **reasoning** (material uncertainty), **preferences** (the global floor under everything a project keeps), and your project's own **domain skills**.
 
 Inside execution, each task runs the same inner loop:
 
@@ -72,8 +72,14 @@ flowchart TD
 | `noetron-security` | OWASP applied to the diff, version-first, before the final review |
 | `noetron-testing` | Test-quality doctrine: name the break, exercise the real thing, mutation check |
 | `noetron-reasoning` | Technique selection for material uncertainty — evidence in, options out, user decides |
+| `noetron-preferences` | The global behavior floor: code/UI hygiene (no emojis), DRY with judgment, production-ready defaults, portability — project preferences override it |
+| `noetron-evolve` | The self-improvement loop: weakness mining → minimal proposal → regression validation → ratified adoption |
 
 Every skill ends with a falsifiability footer — *"This skill is working if:"* — with observable signals, so the harness's own maintenance is measurable instead of opinionated.
+
+## The harness improves itself
+
+`noetron-evolve` closes the loop the falsifiability footers open. Every ten completed tasks (or on demand), it **mines weaknesses** from `noetron/history/`, git, and each skill's own working-if signals; **proposes the smallest edits** tied to concrete failures — never a blind refresh; **validates each proposal by regression** (the trigger test, red-green) before you ever see it; and **adopts only what you ratify**. Autonomy in the mining and the validation, the human at the adoption gate: to gain autonomy, strengthen the oracle — never loosen the gate.
 
 ## The workspace
 
@@ -94,6 +100,6 @@ noetron/
 
 1. Clone this repository.
 2. Copy **everything except `.git/` and this `README.md`** into the root of the project where you want the harness.
-3. Open a conversation (Claude Code, or Cursor via the included rule) in that project. Noetron detects the first use and proposes `noetron-setup` — nothing is created without your confirmation.
+3. Open a conversation (Claude Code; Cursor via the included rule) in that project. Noetron detects the first use and proposes `noetron-setup` — it scaffolds the workspace, anchors `CLAUDE.md` **and** `AGENTS.md` (for Codex and the other tools that read the open agents convention), checks the recommended MCP servers, and maps your domain skills. Nothing is created without your confirmation.
 
 Recommended MCP servers (setup will offer them, you choose the scope): **context7** (live, version-accurate library docs) and **playwright** (real-browser verification of UI work).

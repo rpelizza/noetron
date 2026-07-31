@@ -20,6 +20,8 @@ Two last-filter checks (the real duty lives in earlier phases; this is the net, 
 
 - Behavior changed but the feature's doc in `noetron/docs/` was not touched?
 - A security-sensitive surface changed (auth, untrusted input, queries, sensitive data, uploads, dependencies) without `noetron-security` having run?
+- The task opened a new domain territory — a module, integration, or bounded context — that no `<prefix>-*` skill covers? Offer creating one via `noetron-create-skill`.
+- Ten or more history entries since the last review marker in `noetron/setup/domain-skills.md`? Offer a skills review via `noetron-evolve`.
 
 Found a gap → **name it and offer** to return the work to the cycle. Never block: the decision is the user's, and it gets recorded.
 

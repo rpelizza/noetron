@@ -1,6 +1,6 @@
 ---
 name: noetron-setup
-description: Use when the noetron/ workspace is missing or incomplete at the repository root, on the first use of Noetron in a repository, or when the user asks to install, configure, or repair Noetron.
+description: Use when the noetron/ workspace is missing or incomplete at the repository root, on the first use of Noetron in a repository, or when the user asks to install, bootstrap, configure, or repair Noetron.
 ---
 
 # Noetron Setup
@@ -45,13 +45,15 @@ Create the `noetron/` layout exactly as specified in [Directory Layout](referenc
 | `noetron/setup/` | [setup.md](references/setup.md) |
 | `noetron/state.md` | [state.md](references/state.md) |
 
-## Step 3 — Anchor CLAUDE.md
+## Step 3 — Anchor CLAUDE.md and AGENTS.md
 
-Noetron hooks into the project through `CLAUDE.md` at the repository root:
+Noetron hooks into the project through `CLAUDE.md` and `AGENTS.md` at the repository root — the same block, the same rules, applied to each file independently:
 
-- No `CLAUDE.md` → create one containing only the block below.
-- `CLAUDE.md` exists but has no `<!-- noetron -->` marker → append the block at the end. Never modify existing content.
-- Marker already present → skip.
+- File absent → create it containing only the block below.
+- File exists but has no `<!-- noetron -->` marker → append the block at the end. Never modify existing content.
+- Marker already present → skip that file.
+
+`CLAUDE.md` anchors Claude Code; `AGENTS.md` anchors the tools that read the open agents convention (Codex, Cursor, and others). The harness ships neither file — anchoring at setup is what keeps the paste-install from ever overwriting a user's own instructions.
 
 The block, verbatim:
 
@@ -100,6 +102,7 @@ Domain skills teach the harness this project's own domains. They live in `.claud
 2. Inventory `.claude/skills/`: `noetron-*` are harness skills; `<prefix>-*` are domain skills; report anything else to the user as unrecognized (do not touch it).
 3. If domain skills exist, list them and record the catalog in step 6.
 4. If none exist, sweep the codebase for domain candidates — modules, bounded contexts, integrations, UI areas, infrastructure concerns — and propose creating a domain skill for each strong candidate. Aim for the maximum useful coverage and let the user trim the list.
+   In a **greenfield** repository (no code yet) the sweep has nothing to find: record in `domain-skills.md` that candidates will be proposed as domains materialize — `noetron-finish`'s safety net offers a domain skill whenever a completed task opens a new territory.
 5. Creation itself is delegated to the `noetron-create-skill` skill. If it is not installed yet, record the approved list as pending in step 6 so it can be picked up later.
 
 ## Step 6 — Record project settings

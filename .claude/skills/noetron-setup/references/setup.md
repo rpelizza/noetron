@@ -62,6 +62,9 @@ the authority for the prefix; it is never re-derived from the directory name.
 ## Pending
 Approved by the user, awaiting `noetron-create-skill`:
 - <repo>-<name> — <domain it will cover>
+
+## Last review
+<date> — up to <most recent history entry considered>, by `noetron-evolve`. (At setup: "never".)
 ```
 
 ## Rules

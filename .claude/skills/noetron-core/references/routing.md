@@ -23,6 +23,7 @@ Noetron was built skill-first: every node below exists, so no route points at a 
 | Writing/changing/reviewing tests; a green suite that still feels unproven | `noetron-testing` |
 | Material uncertainty: competing hypotheses, decision between alternatives, evidence synthesis | `noetron-reasoning` |
 | Writing anything a project will keep — code, config, commits, logs, UI text; the user states a lasting preference | `noetron-preferences` |
+| The user asks to review/evolve the domain skills; ten closeouts since the last review; a skill's falsifiability signals failing | `noetron-evolve` |
 
 Every new harness skill adds its row and its edges **in the same change that creates it** — a route and its node are born together.
 

@@ -60,6 +60,7 @@ Propose-confirm: present the final skill to the user and get approval. Then upda
 ## Editing and retiring
 
 - **Editing** an existing domain skill re-enters the loop at VERIFY (checklist + trigger test): an edit can silently break triggering.
+- **Periodic evolution** of the catalog — mining weaknesses from history and proposing these edits — belongs to `noetron-evolve`; the mechanics land back here.
 - **Splitting**: when one skill covers two domains, frame each half as a new skill and retire the original; sharpen both descriptions so their triggers no longer overlap.
 - **Retiring**: propose-confirm, delete the skill directory, update the catalog in the same change.
 
